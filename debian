@@ -1,0 +1,8 @@
+# Для установки на debian используется deb пакет отсюда
+  https://github.com/v2rayA/v2rayA/releases
+
+# Устанавливаем xray-core отсюда https://github.com/XTLS/Xray-install
+  bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+
+# Путь до geoip.dat и geosite.dat
+/usr/local/share/xray
