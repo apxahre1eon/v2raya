@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  v2raya:
+    image: mzz2017/v2raya
+    container_name: v2raya
+    restart: unless-stopped
+    ports:
+      - "2017:2017"  # Web UI
+      - "20170:20170" # HTTP proxy
+      - "20171:20171" # SOCKS5 proxy
+      - "20172:20172" # HTTP proxy with PAC
+    environment:
+      - V2RAYA_LOG_FILE=/tmp/v2raya.log
+      #- V2RAYA_V2RAY_BIN=/usr/local/bin/v2ray
+      - V2RAYA_V2RAY_BIN=/usr/local/bin/xray    # Для работы VLESS + RELITY
+      - V2RAYA_ADDRESS=0.0.0.0:2017
+    volumes:
+      - /lib/modules:/lib/modules:ro
+      - /home/user/v2raya/etc:/etc/v2raya    # Путь до конфига
+      - /home/user/v2raya/geo:/usr/local/share/v2raya    # Путь до geoip.dat и geosite.dat
+
+    cap_add:
+      - NET_ADMIN
+    networks:
+      - v2raya-network
+
+networks:
+  v2raya-network:
+    driver: bridge
