@@ -1,0 +1,3 @@
+default: direct
+ip(ext:"geoip.dat:refilter")->proxy
+domain(ext:"geosite.dat:refilter")->proxy
