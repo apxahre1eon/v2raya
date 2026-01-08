@@ -1,11 +1,11 @@
 # Задача для планировщика задач в OpenWRT.
 
-0 5 * * mon wget -O /usr/share/xray/gesite.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geosite.dat
+0 5 * * mon wget -O /usr/share/xray/geosite.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geosite.dat
 
 0 5 * * mon wget -O /usr/share/xray/geoip.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geoip.dat
 
 # Задача для планировщика задач в Debian.
 
-0 5 * * mon wget -O /usr/local/share/xray/gesite.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geosite.dat
+0 5 * * mon wget -O /usr/local/share/xray/geosite.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geosite.dat
 
 0 5 * * mon wget -O /usr/local/share/xray/geoip.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geoip.dat
