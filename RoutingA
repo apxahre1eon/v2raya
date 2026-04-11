@@ -1,3 +1,6 @@
 default: direct
 ip(ext:"geoip.dat:refilter")->proxy
 domain(ext:"geosite.dat:refilter")->proxy
+
+# Custom domains
+domain(domain: 2ip.ru)->proxy
