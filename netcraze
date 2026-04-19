@@ -1,0 +1,19 @@
+# Файл запуска требуется изменить
+nano /opt/etc/init.d/S24v2raya
+
+#!/bin/sh
+
+ENABLED=yes
+PROCS=v2raya
+export V2RAYA_CONFIG=/opt/etc/v2raya
+ARGS="--config /opt/etc/v2raya/config.json --v2ray-assetsdir /opt/share/v2ray --address 192.168.10.1:2017 --log-file /opt/var/log/v2raya.log"
+PREARGS=""
+DESC=$PROCS
+PATH=/opt/sbin:/opt/bin:/opt/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+. /opt/etc/init.d/rc.func
+
+
+Путь файлов
+/opt/share/v2ray/geoip.dat
+/opt/share/v2ray/geosite.dat
