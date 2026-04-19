@@ -14,6 +14,6 @@ PATH=/opt/sbin:/opt/bin:/opt/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 . /opt/etc/init.d/rc.func
 
 
-Путь файлов
+# Путь файлов
 /opt/share/v2ray/geoip.dat
 /opt/share/v2ray/geosite.dat
