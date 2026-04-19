@@ -11,6 +11,6 @@
 0 5 * * mon wget -O /usr/local/share/xray/geoip.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geoip.dat
 
 # Задача для планировщика netcraze
-0 5 * * mon wget -O /opt/share/v2ray/geosite.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geosite.dat
+0 5 * * mon curl -L -o /opt/share/v2ray/geoip.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geoip.dat
 
-0 5 * * mon wget -O /opt/share/v2ray/geoip.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geoip.dat
+0 5 * * mon curl -L -o /opt/share/v2ray/geosite.dat https://github.com/1andrevich/Re-filter-lists/releases/latest/download/geosite.dat
