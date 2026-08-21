@@ -6,3 +6,5 @@
 
 # Путь до geoip.dat и geosite.dat
   /usr/local/share/xray
+# Ubuntu
+/usr/share/v2raya
